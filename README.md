@@ -2,7 +2,7 @@
 
 ---
 
-# Teste de Estágio
+# Teste de Estágio Target
 
 Este repositório contém soluções para uma série de problemas de programação, que são parte de um teste de vaga para estágio. Abaixo estão os problemas apresentados e suas respectivas soluções.
 
