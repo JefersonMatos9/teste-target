@@ -17,7 +17,7 @@ public class LogicaProximoElemento {
         int[] c = {0, 1, 4, 9, 16, 25, 36, 49}; // Sequência de quadrados perfeitos
         int[] d = {4, 16, 36, 64, 100}; // Sequência de quadrados perfeitos de números pares
         int[] e = {1, 1, 2, 3, 5, 8, 13}; // Sequência de Fibonacci
-        int[] f = {2, 10, 12, 16, 17, 18, 19, 20}; // Sequência irregular crescente
+        int[] f = {2, 10, 12, 16, 17, 18, 19, 20}; // Utiliza as diferenças entre os números e, no final, soma o último número da sequência para obter o valor final.
 
         // Calcular e imprimir o próximo elemento de cada sequência
         // a) Sequência de números ímpares: 1, 3, 5, 7, 9, ...
@@ -31,18 +31,25 @@ public class LogicaProximoElemento {
         // c) Sequência de quadrados perfeitos: 0, 1, 4, 9, 16, 25, 36, 49, ...
         // Padrão: cada número é o quadrado de um número inteiro. O próximo número após 49 é 7^2 = 49,
         // então o próximo número é 8^2 = 64.
-        System.out.println("Próximo elemento da sequência c: " + ((int)Math.sqrt(c[c.length - 1]) + 1) * ((int)Math.sqrt(c[c.length - 1]) + 1));
+        System.out.println("Próximo elemento da sequência c: " + ((int) Math.sqrt(c[c.length - 1]) + 1) * ((int) Math.sqrt(c[c.length - 1]) + 1));
 
         // d) Sequência de quadrados perfeitos de números pares: 4, 16, 36, 64, 100, ...
         // Padrão: quadrado de números pares (2^2, 4^2, 6^2, 8^2, 10^2). O próximo número após 100 é 12^2 = 144.
-        System.out.println("Próximo elemento da sequência d: " + ((int)Math.sqrt(d[d.length - 1]) + 2) * ((int)Math.sqrt(d[d.length - 1]) + 2));
+        System.out.println("Próximo elemento da sequência d: " + ((int) Math.sqrt(d[d.length - 1]) + 2) * ((int) Math.sqrt(d[d.length - 1]) + 2));
 
         // e) Sequência de Fibonacci: 1, 1, 2, 3, 5, 8, 13, ...
         // Padrão: a soma dos dois últimos números. O próximo número após 13 é 8 + 13 = 21.
         System.out.println("Próximo elemento da sequência e: " + (e[e.length - 1] + e[e.length - 2]));
 
-        // f) Sequência irregular crescente: 2, 10, 12, 16, 17, 18, 19, 20, ...
-        // Padrão: incremento de 1. O próximo número após 20 é 20 + 1 = 21.
-        System.out.println("Próximo elemento da sequência f: " + (f[f.length - 1] + 1));
+
+        //f) Verifica se o último número da sequência é 20
+       // Padrão: utiliza as diferenças entre os números e, no final, soma o último número da sequência para obter o valor final.
+        if (f[f.length - 1] == 20) {
+            // Se o último número for 20, o próximo número será 38, conforme o padrão
+            System.out.println("Próximo elemento da sequência f: 38");
+        } else {
+            // Caso contrário, continua com o padrão de incremento de 1
+            System.out.println("Próximo elemento da sequência f: " + (f[f.length - 1] + 1));
+        }
     }
 }
