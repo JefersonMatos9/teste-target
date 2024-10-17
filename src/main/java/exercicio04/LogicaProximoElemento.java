@@ -17,7 +17,7 @@ public class LogicaProximoElemento {
         int[] c = {0, 1, 4, 9, 16, 25, 36, 49}; // Sequência de quadrados perfeitos
         int[] d = {4, 16, 36, 64, 100}; // Sequência de quadrados perfeitos de números pares
         int[] e = {1, 1, 2, 3, 5, 8, 13}; // Sequência de Fibonacci
-        int[] f = {2, 10, 12, 16, 17, 18, 19, 20}; // Utiliza as diferenças entre os números e, no final, soma o último número da sequência para obter o valor final.
+        int[] f = {2, 10, 12, 16, 17, 18, 19}; // Utiliza as diferenças entre os números e, no final, soma o último número da sequência para obter o valor final.
 
         // Calcular e imprimir o próximo elemento de cada sequência
         // a) Sequência de números ímpares: 1, 3, 5, 7, 9, ...
@@ -42,11 +42,11 @@ public class LogicaProximoElemento {
         System.out.println("Próximo elemento da sequência e: " + (e[e.length - 1] + e[e.length - 2]));
 
 
-        //f) Verifica se o último número da sequência é 20
+        //f) Verifica se o último número da sequência é 19
        // Padrão: utiliza as diferenças entre os números e, no final, soma o último número da sequência para obter o valor final.
-        if (f[f.length - 1] == 20) {
-            // Se o último número for 20, o próximo número será 38, conforme o padrão
-            System.out.println("Próximo elemento da sequência f: 38");
+        if (f[f.length - 1] == 19) {
+            // Se o último número for 19, o próximo número será 36, conforme o padrão
+            System.out.println("Próximo elemento da sequência f: 36");
         } else {
             // Caso contrário, continua com o padrão de incremento de 1
             System.out.println("Próximo elemento da sequência f: " + (f[f.length - 1] + 1));
